@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My School Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <header class="topbar">
+
+        <div class="topbar-left">
+
+            <img
+                src="school-logo.jpg.jpg"
+                alt="School Logo"
+                class="school-logo"
+            >
+
+            <div>
+                <div class="school-title">
+                    The Champion's Portal
+                </div>
+
+                <div class="school-subtitle">
+                    Student Information System • SY 2026-2027
+                </div>
+            </div>
+
+        </div>
+
+        <div class="user-pill">
+            👤 Redmar
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN LAYOUT
+    ========================== -->
+
+    <div class="layout">
+
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-title">
+                MAIN MENU
+            </div>
+
+            <a href="#" class="active"
+               onclick="showPage('dashboard'); return false;">
+                <span>🏠</span>
+                <label>Dashboard</label>
+            </a>
+
+            <a href="#"
+               onclick="showPage('announcements'); return false;">
+                <span>📢</span>
+                <label>Announcements</label>
+            </a>
+
+            <a href="#"
+               onclick="showPage('subjects'); return false;">
+                <span>📚</span>
+                <label>Subjects</label>
+            </a>
+
+            <a href="#"
+               onclick="showPage('assignments'); return false;">
+                <span>📝</span>
+                <label>Assignments</label>
+            </a>
+
+            <a href="#"
+               onclick="showPage('grades'); return false;">
+                <span>📊</span>
+                <label>Grades</label>
+            </a>
+
+            <a href="#"
+               onclick="showPage('schedule'); return false;">
+                <span>📅</span>
+                <label>Schedule</label>
+            </a>
+
+
+            <div class="sidebar-title menu-space">
+                STUDENT LIFE
+            </div>
+
+            <a href="#"
+               onclick="showPage('organizations'); return false;">
+                <span>🏆</span>
+                <label>Organizations</label>
+            </a>
+
+            <a href="#"
+               onclick="showPage('attendance'); return false;">
+                <span>👥</span>
+                <label>Attendance</label>
+            </a>
+
+
+            <div class="sidebar-title menu-space">
+                TEACHER
+            </div>
+
+            <a href="#"
+               onclick="showPage('teacher'); return false;">
+                <span>👨‍🏫</span>
+                <label>Teacher Center</label>
+            </a>
+
+
+            <div class="sidebar-title menu-space">
+                ACCOUNT
+            </div>
+
+            <a href="#"
+               onclick="showPage('profile'); return false;">
+                <span>👤</span>
+                <label>Profile</label>
+            </a>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main">
+
+
+            <!-- =========================
+                 DASHBOARD
+            ========================== -->
+
+            <section id="dashboard" class="page active">
+
+                <div class="welcome-card">
+
+                    <div class="welcome-content">
+
+                        <div class="welcome-label">
+                            STUDENT DASHBOARD
+                        </div>
+
+                        <h1>
+                            Welcome back, Redmar! 👋
+                        </h1>
+
+                        <p>
+                            Here's what's happening with your school activities today.
+                        </p>
+
+                    </div>
+
+                    <div class="welcome-decoration">
+                        🎓
+                    </div>
+
+                </div>
+
+
+                <!-- STATS -->
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            📚
+                        </div>
+
+                        <h3>8</h3>
+
+                        <p>
+                            Enrolled Subjects
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon yellow">
+                            📝
+                        </div>
+
+                        <h3>4</h3>
+
+                        <p>
+                            Pending Assignments
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            92%
+                        </div>
+
+                        <h3>92%</h3>
+
+                        <p>
+                            Attendance Rate
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon teal">
+                            ⭐
+                        </div>
+
+                        <h3>89.5</h3>
+
+                        <p>
+                            Current Average
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DASHBOARD GRID -->
+
+                <div class="grid-2">
+
+
+                    <!-- ANNOUNCEMENTS -->
+
+                    <div class="card">
+
+                        <div class="card-title">
+
+                            <div>
+                                <h2>
+                                    📢 Latest Announcements
+                                </h2>
+
+                                <p>
+                                    School updates
+                                </p>
+                            </div>
+
+                            <button
+                                onclick="showPage('announcements')">
+                                View All
+                            </button>
+
+                        </div>
+
+
+                        <div class="announcement">
+
+                            <h3>
+                                📚  M.I.L
+                            </h3>
+
+                            <p>
+                                Review the assigned laboratory activity before the next meeting.
+                            </p>
+
+                            <small>
+                                Today
+                            </small>
+
+                        </div>
+
+
+                        <div class="announcement">
+
+                            <h3>
+                                🏫 School Activity
+                            </h3>
+
+                            <p>
+                                Students are reminded to check the activity schedule.
+                            </p>
+
+                            <small>
+                                Yesterday
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TODAY'S CLASSES -->
+
+                    <div class="card">
+
+                        <div class="card-title">
+
+                            <div>
+                                <h2>
+                                    📅 Today's Classes
+                                </h2>
+
+                                <p>
+                                    Your schedule
+                                </p>
+                            </div>
+
+                            <button
+                                onclick="showPage('schedule')">
+                                Schedule
+                            </button>
+
+                        </div>
+
+
+                        <div class="schedule-item">
+
+                            <div class="schedule-time">
+                                7:30 AM
+                            </div>
+
+                            <div class="schedule-subject">
+
+                                <strong>
+                                    General Physics 2
+                                </strong>
+
+                                <span>
+                                    Room 204 • Mr. Joseph D. Nunag
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="schedule-item">
+
+                            <div class="schedule-time">
+                                9:00 AM
+                            </div>
+
+                            <div class="schedule-subject">
+
+                                <strong>
+                                    HOPE 4
+                                </strong>
+
+                                <span>
+                                    Room C-3
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="schedule-item">
+
+                            <div class="schedule-time">
+                                1:00 PM
+                            </div>
+
+                            <div class="schedule-subject">
+
+                                <strong>
+                                    Pre-Calculus
+                                </strong>
+
+                                <span>
+                                    Room 301
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ANNOUNCEMENTS
+            ========================== -->
+
+            <section id="announcements" class="page">
+
+                <div class="page-header">
+
+                    <h1>
+                        📢 Announcements
+                    </h1>
+
+                    <p>
+                        Stay updated with school activities and reminders.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="announcement">
+
+                        <h3>
+                            📚 Chemistry Laboratory Activity
+                        </h3>
+
+                        <p>
+                            Students should prepare the required materials for the upcoming laboratory activity.
+                        </p>
+
+                        <small>
+                            Posted today
+                        </small>
+
+                    </div>
+
+
+                    <div class="announcement">
+
+                        <h3>
+                            🏐 Volleyball Club Practice
+                        </h3>
+
+                        <p>
+                            Practice will be held after regular classes.
+                        </p>
+
+                        <small>
+                            Posted yesterday
+                        </small>
+
+                    </div>
+
+
+                    <div class="announcement">
+
+                        <h3>
+                            📖 Examination Reminder
+                        </h3>
+
+                        <p>
+                            Review your lessons and check your subject schedules.
+                        </p>
+
+                        <small>
+                            Posted September 20, 2026
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 SUBJECTS
+            ========================== -->
+
+            <section id="subjects" class="page">
+
+                <div class="page-header">
+
+                    <h1>
+                        📚 My Subjects
+                    </h1>
+
+                    <p>
+                        Your subjects for School Year 2026-2027.
+                    </p>
+
+                </div>
+
+
+                <div class="grid-4">
+
+
+                    <div class="subject-card">
+
+                        <div class="subject-icon">
+                            🧪
+                        </div>
+
+                        <h3>
+                            General Chemistry 2
+                        </h3>
+
+                        <p>
+                            Chemical reactions, solutions, equilibrium, and electrochemistry.
+                        </p>
+
+                        <div class="subject-teacher">
+                            👨‍🏫 Mr. Joseph D. Nunag
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-card">
+
+                        <div class="subject-icon">
+                            ⚡
+                        </div>
+
+                        <h3>
+                            General Physics 2
+                        </h3>
+
+                        <p>
+                            Electricity, magnetism, circuits, and electromagnetic phenomena.
+                        </p>
+
+                        <div class="subject-teacher">
+                            👨‍🏫 Physics Teacher
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-card">
+
+                        <div class="subject-icon">
+                            📐
+                        </div>
+
+                        <h3>
+                            Pre-Calculus
+                        </h3>
+
+                        <p>
+                            Functions, trigonometry, graphs, and mathematical applications.
+                        </p>
+
+                        <div class="subject-teacher">
+                            👨‍🏫 Mathematics Teacher
+                        </div>
+
+                    </div>
+
+
+                    <div class="subject-card">
+
+                        <div class="subject-icon">
+                            💻
+                        </div>
+
+                        <h3>
+                            Empowerment Technologies
+                        </h3>
+
+                        <p>
+                            Digital tools, information technology, and online productivity.
+                        </p>
+
+                        <div class="subject-teacher">
+                            👨‍🏫 ICT Teacher
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ASSIGNMENTS
+            ========================== -->
+
+            <section id="assignments" class="page">
+
+                <div class="page-header">
+
+                    <h1>
+                        📝 Assignments
+                    </h1>
+
+                    <p>
+                        Track your upcoming school requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="assignment">
+
+                        <div>
+
+                            <h3>
+                                General Chemistry 2
+                            </h3>
+
+                            <p>
+                                Laboratory Report • Due September 25
+                            </p>
+
+                        </div>
+
+                        <span class="badge">
+                            Due Soon
+                        </span>
+
+                    </div>
+
+
+                    <div class="assignment">
+
+                        <div>
+
+                            <h3>
+                                General Physics 2
+                            </h3>
+
+                            <p>
+                                Electromagnetism Worksheet • Due September 27
+                            </p>
+
+                        </div>
+
+                        <span class="badge">
+                            Pending
+                        </span>
+
+                    </div>
+
+
+                    <div class="assignment">
+
+                        <div>
+
+                            <h3>
+                                Pre-Calculus
+                            </h3>
+
+                            <p>
+                                Function Exercises • Due September 29
+                            </p>
+
+                        </div>
+
+                        <span class="badge green-badge">
+                            Upcoming
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 GRADES
+            ========================== -->
+
+            <section id="grades" class="page">
+
+                <div class="page-header">
+
+                    <h1>
+                        📊 Grades
+                    </h1>
+
+                    <p>
+                        Calculate scores and view your current academic performance.
+                    </p>
+
+                </div>
+
+
+                <!-- CALCULATOR -->
+
+                <div class="grade-calculator">
+
+                    <div class="card-title">
+
+                        <div>
+
+                            <h2>
+                                🧮 Grade Calculator
+                            </h2>
+
+                            <p>
+                                Enter your raw scores.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="grade-row">
+
+                        <input
+                            type="number"
+                            id="score1"
+                            placeholder="Score"
+                        >
+
+                        <input
+                            type="number"
+                            id="total1"
+                            placeholder="Total Score"
+                        >
+
+                    </div>
+
+
+                    <div class="grade-row">
+
+                        <input
+                            type="number"
+                            id="score2"
+                            placeholder="Score"
+                        >
+
+                        <input
+                            type="number"
+                            id="total2"
+                            placeholder="Total Score"
+                        >
+
+                    </div>
+
+
+                    <div class="grade-row">
+
+                        <input
+                            type="number"
+                            id="score3"
+                            placeholder="Score"
+                        >
+
+                        <input
+                            type="number"
+                            id="total3"
+                            placeholder="Total Score"
+                        >
+
+                    </div>
+
+
+                    <div class="grade-row">
+
+                        <input
+                            type="number"
+                            id="score4"
+                            placeholder="Score"
+                        >
+
+                        <input
+                            type="number"
+                            id="total4"
+                            placeholder="Total Score"
+                        >
+
+                    </div>
+
+
+                    <button onclick="calculateGrade()">
+                        Calculate Grade
+                    </button>
+
+
+                    <div
+                        id="gradeResult"
+                        class="grade-result"
+                    >
+
+                        <h3>
+                            --
+                        </h3>
+
+                        <p>
+                            Enter your scores to calculate.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CURRENT GRADES -->
+
+                <div class="card">
+
+                    <div class="card-title">
+
+                        <div>
+                            <h2>
+                                📋 Current Subject Grades
+                            </h2>
+
+                            <p>
+                                Sample academic record
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Grade</th>
+                                    <th>Status</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>General Chemistry 2</td>
+                                    <td><strong>91</strong></td>
+                                    <td>
+                                        <span class="status green">
+                                            Passed
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>General Physics 2</td>
+                                    <td><strong>88</strong></td>
+                                    <td>
+                                        <span class="status green">
+                                            Passed
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Pre-Calculus</td>
+                                    <td><strong>90</strong></td>
+                                    <td>
+                                        <span class="status green">
+                                            Passed
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Empowerment Technologies</td>
+                                    <td><strong>89</strong></td>
+                                    <td>
+                                        <span class="status green">
+                                            Passed
+                                        </span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 SCHEDULE
+            ========================== -->
+
+            <section id="schedule" class="page">
+
+                <div class="page-header">
+
+                    <h1>
+                        📅 Class Schedule
+                    </h1>
+
+                    <p>
+                        Your weekly class schedule.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="schedule-day">
+                        MONDAY
+                    </div>
+
+                    <div class="schedule-item">
+
+                        <div class="schedule-time">
+                            7:30 AM
+                        </div>
+
+                        <div class="schedule-subject">
+
+                            <strong>
+                                General Chemistry 2
+                            </strong>
+
+                            <span>
+                                Room 204
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="schedule-item">
+
+                        <div class="schedule-time">
+                            9:00 AM
+                        </div>
+
+                        <div class="schedule-subject">
+
+                            <strong>
+                                General Physics 2
+                            </strong>
+
+                            <span>
+                                Room 205
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="schedule-day">
+                        TUESDAY
+                    </div>
+
+                    <div class="schedule-item">
+
+                        <div class="schedule-time">
+                            8:00 AM
+                        </div>
+
+                        <div class="schedule-subject">
+
+                            <strong>
+                                Pre-Calculus
+                            </strong>
+
+                            <span>
+                                Room 301
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="schedule-item">
+
+                        <div class="schedule-time">
+                            10:00 AM
+                        </div>
+
+                        <div class="schedule-subject">
+
+                            <strong>
+                                Empowerment Technologies
+                            </strong>
+
+                            <span>
+                                ICT Laboratory
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ORGANIZATIONS
+            ========================== -->
+
+            <section id="organizations" class="page">
+
+                <div class="page-header">
+
+                    <h1>
+                        🏆 Organizations
+                    </h1>
+
+                    <p>
+                        Explore school clubs and student organizations.
+                    </p>
+
+                </div>
+
+
+                <div class="grid-4">
+
+
+                    <div class="organization-card">
+
+                        <div class="organization-icon">
+                            🏫
+                        </div>
+
+                        <h3>
+                            Supreme Secondary Learner Government
+                        </h3>
+
+                        <p>
+                            Student leadership and school-wide activities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="organization-card">
+
+                        <div class="organization-icon">
+                            🧪
+                        </div>
+
+                        <h3>
+                            Science Club
+                        </h3>
+
+                        <p>
+                            Science experiments, research, and innovation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="organization-card">
+
+                        <div class="organization-icon">
+                            📐
+                        </div>
+
+                        <h3>
+                            Mathematics Club
+                        </h3>
+
+                        <p>
+                            Mathematics activities, competitions, and challenges.
+                        </p>
+
+                    </div>
+
+
+                    <div class="organization-card">
+
+                        <div class="organization-icon">
+                            🏐
+                        </div>
+
+                        <h3>
+                            Volleyball Club
+                        </h3>
+
+                        <p>
+                            Sports training and school competitions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="organization-card">
+
+                        <div class="organization-icon">
+                            🎨
+                        </div>
+
+                        <h3>
+                            Arts & Culture Club
+                        </h3>
+
+                        <p>
+                            Creative arts, culture, and school performances.
+                        </p>
+
+                    </div>
+
+
+                    <div class="organization-card">
+
+                        <div class="organization-icon">
+                            💻
+                        </div>
+
+                        <h3>
+                            ICT Club
+                        </h3>
+
+                        <p>
+                            Coding, technology, and digital innovation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="organization-card">
+
+                        <div class="organization-icon">
+                            🌱
+                        </div>
+
+                        <h3>
+                            YES-O
+                        </h3>
+
+                        <p>
+                            Environmental awareness and sustainability activities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="organization-card">
+
+                        <div class="organization-icon">
+                            📰
+                        </div>
+
+                        <h3>
+                            Campus Journalism
+                        </h3>
+
+                        <p>
+                            Writing, journalism, photography, and publication.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ATTENDANCE
+            ========================== -->
+
+            <section id="attendance" class="page">
+
+                <div class="page-header">
+
+                    <h1>
+                        👥 Attendance
+                    </h1>
+
+                    <p>
+                        View and manage your attendance record.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="attendance-controls">
+
+                        <div>
+                            <label>
+                                Class
+                            </label>
+
+                            <select id="classSelect">
+
+                                <option>
+                                    Grade 12 STEM
+                                </option>
+
+                                <option>
+                                    Grade 12 HUMSS
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div>
+
+                            <label>
+                                Subject
+                            </label>
+
+                            <select id="subjectSelect">
+
+                                <option>
+                                    General Chemistry 2
+                                </option>
+
+                                <option>
+                                    General Physics 2
+                                </option>
+
+                                <option>
+                                    Pre-Calculus
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div>
+
+                            <label>
+                                Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="attendanceDate"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUMMARY -->
+
+                <div class="attendance-summary">
+
+                    <div class="attendance-stat">
+
+                        <span>
+                            Present
+                        </span>
+
+                        <strong id="presentCount">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="attendance-stat">
+
+                        <span>
+                            Absent
+                        </span>
+
+                        <strong id="absentCount">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="attendance-stat">
+
+                        <span>
+                            Late
+                        </span>
+
+                        <strong id="lateCount">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="attendance-stat highlight-stat">
+
+                        <span>
+                            Attendance Rate
+                        </span>
+
+                        <strong id="attendanceRate">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div class="card attendance-table">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Student
+                                </th>
+
+                                <th>
+                                    Present
+                                </th>
+
+                                <th>
+                                    Absent
+                                </th>
+
+                                <th>
+                                    Late
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+                                    Redmar Pineda
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student1"
+                                        value="present"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student1"
+                                        value="absent"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student1"
+                                        value="late"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Student 2
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student2"
+                                        value="present"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student2"
+                                        value="absent"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student2"
+                                        value="late"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Student 3
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student3"
+                                        value="present"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student3"
+                                        value="absent"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student3"
+                                        value="late"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Student 4
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student4"
+                                        value="present"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student4"
+                                        value="absent"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student4"
+                                        value="late"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    Student 5
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student5"
+                                        value="present"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student5"
+                                        value="absent"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                                <td>
+                                    <input
+                                        type="radio"
+                                        name="student5"
+                                        value="late"
+                                        onchange="updateAttendance()"
+                                    >
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+
+                    <div class="attendance-buttons">
+
+                        <button onclick="saveAttendance()">
+                            ✓ Save Attendance
+                        </button>
+
+                        <button
+                            class="btn-secondary"
+                            onclick="clearAttendance()"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 TEACHER CENTER
+            ========================== -->
+
+            <section id="teacher" class="page">
+
+                <div class="page-header">
+
+                    <h1>
+                        👨‍🏫 Teacher Center
+                    </h1>
+
+                    <p>
+                        Tools for managing classes, grades, and attendance.
+                    </p>
+
+                </div>
+
+
+                <div class="grid-3">
+
+
+                    <div class="teacher-card">
+
+                        <div class="teacher-icon">
+                            🧮
+                        </div>
+
+                        <h3>
+                            Grade Calculator
+                        </h3>
+
+                        <p>
+                            Calculate student scores and academic grades.
+                        </p>
+
+                        <button onclick="showPage('grades')">
+                            Open
+                        </button>
+
+                    </div>
+
+
+                    <div class="teacher-card">
+
+                        <div class="teacher-icon">
+                            👥
+                        </div>
+
+                        <h3>
+                            Attendance
+                        </h3>
+
+                        <p>
+                            Record and monitor student attendance.
+                        </p>
+
+                        <button onclick="showPage('attendance')">
+                            Open
+                        </button>
+
+                    </div>
+
+
+                    <div class="teacher-card">
+
+                        <div class="teacher-icon">
+                            📢
+                        </div>
+
+                        <h3>
+                            Announcements
+                        </h3>
+
+                        <p>
+                            View school and classroom announcements.
+                        </p>
+
+                        <button onclick="showPage('announcements')">
+                            Open
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-stats">
+
+                    <div class="teacher-stat">
+                        <strong>42</strong>
+                        <span>Students</span>
+                    </div>
+
+                    <div class="teacher-stat">
+                        <strong>4</strong>
+                        <span>Subjects</span>
+                    </div>
+
+                    <div class="teacher-stat">
+                        <strong>92%</strong>
+                        <span>Class Attendance</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 PROFILE
+            ========================== -->
+
+            <section id="profile" class="page">
+
+                <div class="page-header">
+
+                    <h1>
+                        👤 My Profile
+                    </h1>
+
+                    <p>
+                        View your student information.
+                    </p>
+
+                </div>
+
+
+                <div class="profile-card">
+
+                    <div class="profile-avatar">
+                        👤
+                    </div>
+
+                    <h2>
+                        Redmar C. Pineda
+                    </h2>
+
+                    <p>
+                        Grade 12 STEM Student
+                    </p>
+
+
+                    <div class="profile-info">
+
+                        <div>
+                            <span>
+                                Student ID
+                            </span>
+
+                            <strong>
+                                2026-STEM-001
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <span>
+                                School Year
+                            </span>
+
+                            <strong>
+                                2026-2027
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <span>
+                                Strand
+                            </span>
+
+                            <strong>
+                                STEM
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <span>
+                                Status
+                            </span>
+
+                            <strong class="green-text">
+                                Active
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 FOOTER
+            ========================== -->
+
+            <footer>
+
+                <p>
+                    © 2026 The Champion's Portal
+                </p>
+
+                <p>
+                    Pulungsantol National Highschool • SY 2026-2027
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
