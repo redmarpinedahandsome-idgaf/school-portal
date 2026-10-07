@@ -2244,3 +2244,237 @@ footer p:first-child {
     }
 
 }
+/* =========================================
+   EDITABLE PORTAL UI
+========================================= */
+.editor-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 14px;
+}
+
+.add-btn {
+    background: var(--yellow);
+    color: var(--navy-dark);
+    box-shadow: 0 6px 16px rgba(254,215,0,.18);
+}
+
+.add-btn:hover {
+    background: var(--yellow-dark);
+    color: white;
+}
+
+.editable-item,
+.editable-card {
+    position: relative;
+}
+
+.item-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.item-action-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--teal-light);
+    color: var(--teal-dark);
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.icon-btn:hover {
+    background: var(--teal);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: none;
+}
+
+.icon-btn.danger {
+    background: #fff0f0;
+    color: #b33a3a;
+}
+
+.icon-btn.danger:hover {
+    background: #b33a3a;
+    color: white;
+}
+
+.empty-state {
+    padding: 35px 20px;
+    text-align: center;
+    color: var(--muted);
+    background: var(--cream);
+    border-radius: 14px;
+}
+
+/* Modal */
+.portal-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s ease;
+}
+
+.portal-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(22,59,92,.55);
+    backdrop-filter: blur(5px);
+}
+
+.modal-box {
+    position: relative;
+    width: min(520px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: 0 25px 70px rgba(22,59,92,.28);
+    transform: translateY(12px) scale(.98);
+    transition: transform .18s ease;
+}
+
+.portal-modal.open .modal-box {
+    transform: translateY(0) scale(1);
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-kicker {
+    color: var(--teal);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.modal-header h2 {
+    margin-top: 4px;
+    color: var(--navy);
+    font-size: 22px;
+}
+
+.modal-close {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: var(--cream);
+    color: var(--navy);
+    font-size: 22px;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: var(--cream-dark);
+    color: var(--navy);
+}
+
+.editor-form {
+    display: grid;
+    gap: 14px;
+}
+
+.editor-field {
+    display: grid;
+    gap: 7px;
+}
+
+.editor-field > span {
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.editor-field input,
+.editor-field select,
+.editor-field textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: #fff;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+    resize: vertical;
+    transition: .2s ease;
+}
+
+.editor-field input:focus,
+.editor-field select:focus,
+.editor-field textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(0,128,129,.08);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+    padding-top: 7px;
+}
+
+#portalToast {
+    position: fixed;
+    left: 50%;
+    bottom: 25px;
+    z-index: 6000;
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    pointer-events: none;
+    background: var(--navy-dark);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 13px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: var(--shadow-lg);
+    transition: .25s ease;
+}
+
+#portalToast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+@media (max-width: 600px) {
+    .editor-toolbar { justify-content: stretch; }
+    .add-btn { width: 100%; }
+    .assignment,
+    .schedule-item,
+    .announcement { gap: 12px; }
+    .item-actions { flex-direction: column; }
+    .item-action-group { flex-direction: column; align-items: flex-end; }
+}
